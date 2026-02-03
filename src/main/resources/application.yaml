@@ -1,3 +1,13 @@
 spring:
   application:
     name: safenet-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/safenet_db
+    username: sanjar
+    password: 12345
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
