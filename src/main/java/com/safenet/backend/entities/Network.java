@@ -1,6 +1,7 @@
 package com.safenet.backend.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "networks")
+@Data
 public class Network {
 
     @Id
