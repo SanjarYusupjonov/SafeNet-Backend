@@ -1,13 +1,14 @@
 package com.safenet.backend.entities;
 
-import com.safenet.backend.entities.Network;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "devices",
         uniqueConstraints = @UniqueConstraint(columnNames = {"ipAddress", "network_id"}))
+@Data
 public class Device {
 
     @Id
