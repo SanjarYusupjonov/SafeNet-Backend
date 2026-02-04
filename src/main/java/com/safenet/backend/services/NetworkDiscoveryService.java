@@ -30,6 +30,8 @@ public class NetworkDiscoveryService {
 
         List<ScanResult> results = scanner.scan(network.getCidr());
 
+        System.out.println("Scanner result Size : " + results.size());
+
         results.stream()
                 .filter(ScanResult::isReachable)
                 .map(r -> deviceService.normalize(r, network))
