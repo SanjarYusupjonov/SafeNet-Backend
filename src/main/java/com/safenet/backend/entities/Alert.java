@@ -1,11 +1,13 @@
 package com.safenet.backend.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "alerts")
+@Data
 public class Alert {
 
     @Id
