@@ -2,7 +2,8 @@ package com.safenet.backend;
 
 import com.safenet.backend.entities.Network;
 import com.safenet.backend.repositories.NetworkRepository;
-import com.safenet.backend.services.NetworkDiscoveryService;
+import com.safenet.backend.services.network.NetworkDiscoveryService;
+import com.safenet.backend.services.network.NetworkUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -13,10 +14,12 @@ public class StartupTestRunner implements CommandLineRunner {
 
     private final NetworkRepository networkRepository;
     private final NetworkDiscoveryService networkDiscoveryService;
+    private final NetworkUtils networkUtils;
 
     @Override
     public void run(String... args) {
-        String cidr = "192.168.1.0/24";
+//        String cidr = networkUtils.getLocalCidr();
+        String cidr = "192.168.32.0/20";
 
         Network network = networkRepository
                 .findByCidr(cidr)

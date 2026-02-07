@@ -1,6 +1,7 @@
 package com.safenet.backend.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
@@ -8,6 +9,7 @@ import static jakarta.persistence.GenerationType.*;
 
 @Entity
 @Table(name = "ip_activity_logs")
+@Data
 public class IPActivityLog {
 
     @Id
